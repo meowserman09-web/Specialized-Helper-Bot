@@ -34,11 +34,6 @@ export default {
       if (countingProcessed) {
         return;
       }
-        if (message.channel.id === "1538338644102746234") {
-    setTimeout(() => {
-        message.delete().catch(() => {});
-    }, 5000);
-}
 
       await handlePrefixCommand(message, client);
 
@@ -254,5 +249,9 @@ async function handleLeveling(message, client) {
     }
   } catch (error) {
     logger.error('Error handling leveling for message:', error);
-  }
+  } if (message.channel.id === "1538338644102746234") {
+  setTimeout(() => {
+    message.delete().catch(() => {});
+  }, 5000);
+}
 }
